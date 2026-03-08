@@ -528,3 +528,102 @@
         transform: translateY(0);
     }
 }
+
+// SVG Icon Animations
+.strategy-icon-anim {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+.strategy-icon-rotate {
+    animation: iconRotate 4s linear infinite;
+    transform-origin: center;
+}
+
+.strategy-icon-pulse {
+    animation: iconScale 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.strategy-icon-balance {
+    animation: iconBalance 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.strategy-icon-flash {
+    animation: iconFlash 1s ease-in-out infinite;
+}
+
+.strategy-icon-shield {
+    animation: iconShield 2s ease-in-out infinite;
+}
+
+.stat-icon-bot {
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+.stat-icon-profit {
+    animation: iconSpin 3s linear infinite;
+    transform-origin: center;
+}
+
+.chat-icon-anim {
+    animation: iconWiggle 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+@keyframes iconRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes iconScale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes iconBalance {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+@keyframes iconFlash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes iconShield {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes iconSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes iconWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+// Enhanced icon container styling
+.dbot-loader__strategy-icon,
+.dbot-loader__stat-icon,
+.community-modal__description-icon {
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
