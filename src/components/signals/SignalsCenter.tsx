@@ -11,7 +11,7 @@ import { stakeManager } from '@/services/stake-manager.service';
 import { aiSignalIntelligence } from '@/services/ai-signal-intelligence.service';
 import patelSignalGenerator from '@/services/patel-signal-generator.service';
 import { EntryAnalysis, EvenOddEntrySuggester } from '@/utils/evenodd-entry-suggester';
-import { AutoTradeSettings } from './AutoTradeSettings';
+import { UnknownTradersSettings } from './UnknownTradersSettings';
 import { ConnectionPoolStatus } from './ConnectionPoolStatus';
 import { ConnectionStatus } from './ConnectionStatus';
 import { DigitHackerSignals } from './DigitHackerSignals';
@@ -194,7 +194,7 @@ export const SignalsCenter: React.FC = () => {
     const [, setTradeStats] = useState(signalTradingService.getStats());
     const [showDashboard, setShowDashboard] = useState(false);
     const [showRiskSettings, setShowRiskSettings] = useState(false);
-    const [showAutoTradeSettings, setShowAutoTradeSettings] = useState(false);
+    const [showUnknownTradersSettings, setShowUnknownTradersSettings] = useState(false);
     const [isMyTradesExpanded, setIsMyTradesExpanded] = useState(true);
     const [autoTradeEnabled, setAutoTradeEnabled] = useState(signalTradingService.getAutoTradeConfig().enabled);
     const [, forceUpdate] = useState({});
@@ -2827,7 +2827,7 @@ export const SignalsCenter: React.FC = () => {
                         <div className='header-controls'>
                             <button
                                 className={`control-btn ${autoTradeEnabled ? 'active' : ''}`}
-                                onClick={() => setShowAutoTradeSettings(true)}
+                                onClick={() => setShowUnknownTradersSettings(true)}
                                 title='Configure auto-trade settings'
                             >
                                 🤖 Auto-Trade {autoTradeEnabled && '(ON)'}
@@ -3940,10 +3940,10 @@ export const SignalsCenter: React.FC = () => {
 
             {showRiskSettings && <RiskManagementSettings onClose={() => setShowRiskSettings(false)} />}
 
-            {showAutoTradeSettings && (
-                <AutoTradeSettings
+            {showUnknownTradersSettings && (
+                <UnknownTradersSettings
                     onClose={() => {
-                        setShowAutoTradeSettings(false);
+                        setShowUnknownTradersSettings(false);
                         setAutoTradeEnabled(signalTradingService.getAutoTradeConfig().enabled);
                     }}
                 />

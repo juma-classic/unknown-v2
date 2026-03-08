@@ -4,12 +4,12 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import { type AutoTradeConfig, autoTrader, type AutoTradeStats } from '../../services/auto-trader.service';
+import { type AutoTradeConfig, autoTrader, type UnknownTradersStats } from '../../services/auto-trader.service';
 import './AutoTradePanel.scss';
 
 export const AutoTradePanel: React.FC = () => {
     const [config, setConfig] = useState<AutoTradeConfig>(autoTrader.getConfig());
-    const [stats, setStats] = useState<AutoTradeStats>(autoTrader.getStats());
+    const [stats, setStats] = useState<UnknownTradersStats>(autoTrader.getStats());
     const [isEnabled, setIsEnabled] = useState(autoTrader.isEnabled());
 
     useEffect(() => {

@@ -1,8 +1,8 @@
 {
-    "name": "Auto Trades",
-    "short_name": "Auto Trades",
+    "name": "Unknown Traders",
+    "short_name": "Unknown Traders",
     "theme_color": "#14b8a6",
-    "description": "Professional automated trading platform - Reliable trading tools by Auto Trades.",
+    "description": "Professional automated trading platform - Reliable trading tools by Unknown Traders.",
     "background_color": "#0f1419",
     "display": "standalone",
     "start_url": "/",

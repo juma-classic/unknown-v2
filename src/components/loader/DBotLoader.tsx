@@ -58,8 +58,8 @@ const DBotLoader: React.FC<DBotLoaderProps> = ({ onFinish }) => {
                     <div className="dbot-loader__logo">
                         <div className="dbot-loader__logo-icon">D</div>
                         <div className="dbot-loader__logo-text">
-                            <h1>Auto Trades</h1>
-                            <p>autotrades.com</p>
+                            <h1>Unknown Traders</h1>
+                            <p>unknowntraders.com</p>
                         </div>
                         <span className="dbot-loader__version">v2</span>
                     </div>

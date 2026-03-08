@@ -34,7 +34,7 @@ export interface TradeExecution {
     error?: string;
 }
 
-export interface AutoTradeStats {
+export interface UnknownTradersStats {
     totalTrades: number;
     tradesThisHour: number;
     tradesToday: number;
@@ -60,7 +60,7 @@ class AutoTraderService {
     };
 
     private executions: TradeExecution[] = [];
-    private stats: AutoTradeStats = {
+    private stats: UnknownTradersStats = {
         totalTrades: 0,
         tradesThisHour: 0,
         tradesToday: 0,
@@ -264,7 +264,7 @@ class AutoTraderService {
     /**
      * Get statistics
      */
-    public getStats(): AutoTradeStats {
+    public getStats(): UnknownTradersStats {
         return { ...this.stats };
     }
 
