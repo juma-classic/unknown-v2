@@ -89,6 +89,7 @@
             &--padding {
                 padding-inline-start: 4.8rem;
                 padding-inline-end: 1.6rem;
+                margin-bottom: 0.8rem; /* Add gap between menu items */
             }
 
             &--bottom-border {
@@ -102,6 +103,8 @@
                 transition: all 0.2s ease;
                 position: relative;
                 overflow: hidden;
+                border-radius: 12px; /* Add rounded corners for better separation */
+                margin-bottom: 0.4rem; /* Add gap between individual buttons */
 
                 // Teal shiny background effect
                 &:before {
