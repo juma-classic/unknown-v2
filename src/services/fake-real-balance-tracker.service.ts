@@ -109,12 +109,17 @@ class FakeRealBalanceTrackerService {
 
         // Update fake real balance
         const currentFakeBalance = this.getBalance();
-        const newFakeBalance = currentFakeBalance + demoChange;
+        const newFakeBalance = Math.max(0, currentFakeBalance + demoChange); // Prevent negative balance
 
         localStorage.setItem(this.STORAGE_KEY, newFakeBalance.toString());
         localStorage.setItem(this.DEMO_BALANCE_KEY, newDemoBalance.toString());
 
         console.log(`💸 Balance updated: ${currentFakeBalance.toFixed(2)} → ${newFakeBalance.toFixed(2)} (${demoChange >= 0 ? '+' : ''}${demoChange.toFixed(2)})`);
+        
+        // Log warning if balance hit zero
+        if (newFakeBalance === 0 && currentFakeBalance > 0) {
+            console.warn('⚠️ Fake Real Balance reached $0.00 - balance cannot go negative');
+        }
     }
 
 
