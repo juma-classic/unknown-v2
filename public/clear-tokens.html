@@ -78,7 +78,7 @@
         <h1>🔄 App ID Update</h1>
         <div class="info">
             <p><strong>Why am I seeing this page?</strong></p>
-            <p>Auto Trades has updated its App ID from <code>119552</code> to <code>120557</code>.</p>
+            <p>Auto Trades has updated its App ID from <code>126101</code> to <code>126101</code>.</p>
             <p>Your stored authentication tokens are tied to the old App ID and need to be cleared.</p>
         </div>
         
@@ -117,7 +117,7 @@
                     if (key && (
                         key.includes('token') || 
                         key.includes('loginid') || 
-                        key.includes('119552') ||
+                        key.includes('126101') ||
                         key.includes('config.app_id') ||
                         key.includes('client') ||
                         key.includes('active')
@@ -133,7 +133,7 @@
                 });
                 
                 // Set new app ID
-                localStorage.setItem('config.app_id', '120557');
+                localStorage.setItem('config.app_id', '126101');
                 
                 status.className = 'status show success';
                 status.innerHTML = `
@@ -154,7 +154,7 @@
         }
         
         function redirectToLogin() {
-            window.location.href = 'https://oauth.deriv.com/oauth2/authorize?app_id=120557&l=EN&brand=global-trades';
+            window.location.href = 'https://oauth.deriv.com/oauth2/authorize?app_id=126101&l=EN&brand=global-trades';
         }
     </script>
 </body>

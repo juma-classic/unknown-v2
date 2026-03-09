@@ -28,7 +28,7 @@ class DerivConnectionPoolService {
     // App ID Configuration - TEMPORARY: Use single App ID to resolve connection issues
     private readonly appIdConfigs: AppIdConfig[] = [
         {
-            appId: '120557', // Your default App ID - UNCHANGED
+            appId: '126101', // Your default App ID - UNCHANGED
             type: ConnectionType.CORE,
             description: 'All Trading Features (Consolidated)',
             features: ['Bot Builder', 'Trading', 'Analysis', 'Signals', 'Fast Lane'],
@@ -89,7 +89,7 @@ class DerivConnectionPoolService {
             });
         });
 
-        console.log('✅ Connection Pool initialized with single App ID (120557) for all features');
+        console.log('✅ Connection Pool initialized with single App ID (126101) for all features');
         console.log('📊 This temporary fix consolidates all connections to resolve timeout issues');
         this.logConnectionDistribution();
     }
@@ -199,7 +199,7 @@ class DerivConnectionPoolService {
      */
     public getAppId(type: ConnectionType): string {
         const config = this.appIdConfigs.find(c => c.type === type);
-        return config?.appId || '120557';
+        return config?.appId || '126101';
     }
 
     /**
