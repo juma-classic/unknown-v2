@@ -1,6 +1,6 @@
 /**
  * Fake Real Balance Reset Detector
- * Detects swipe gesture to reset fake real balance back to $2,000
+ * Detects swipe gesture to reset fake real balance back to $102.40
  * 
  * Mobile: Swipe left 2 times, then right 2 times
  * Desktop: Type "reset" then press Enter
@@ -151,7 +151,7 @@ class FakeRealResetDetector {
         fakeRealBalanceTracker.resetBalance();
         
         // Show notification
-        console.log('💰 Fake Real Balance reset to $2,000.00');
+        console.log('💰 Fake Real Balance reset to $102.40');
         
         // Trigger UI update
         window.dispatchEvent(new CustomEvent('fake-real-balance-updated'));
