@@ -236,7 +236,7 @@
         align-items: center;
         gap: 0.75rem;
         padding: 0.875rem 1.75rem !important;
-        background: #0D9488;
+        background: #1e3a8a; /* Dark blue background */
         border: none;
         border-radius: 8px; /* Add rounded corners for better separation */
         color: #FFFFFF !important;
@@ -294,12 +294,12 @@
             color: #FFFFFF !important;
         }
 
-        // Hover state - Subtle overlay
+        // Hover state - Lighter blue
         &:hover:not(&--active) {
-            background: rgba(255, 255, 255, 0.15);
+            background: #2563eb; /* Lighter blue on hover */
             color: #FFFFFF !important;
             transform: none;
-            box-shadow: none;
+            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 
             &:before {
                 width: 0;
@@ -317,14 +317,14 @@
             }
         }
 
-        // Active state - Glassmorphism effect
+        // Active state - Brighter blue with glow
         &--active {
-            background: rgba(255, 255, 255, 0.15) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            background: #3b82f6 !important; /* Bright blue for active state */
+            border: 1px solid rgba(59, 130, 246, 0.5) !important;
             color: #FFFFFF !important;
             box-shadow: 
-                0 8px 32px rgba(31, 38, 135, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+                0 4px 12px rgba(59, 130, 246, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
             backdrop-filter: blur(12px) !important;
             -webkit-backdrop-filter: blur(12px) !important;
             transform: none;
